@@ -33,3 +33,9 @@ Next we show a scatterplot of `y` vs `x`.
 ```{r yx_scatter}
 ggplot(plot_df, aes(x = x, y = y)) + geom_point()
 ```
+
+Lastly, we show a histogram of the `y` variable.
+
+```{r y_hist}
+ggplot(plot_df, aes(x = y)) + geom_histogram()
+```
