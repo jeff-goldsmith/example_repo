@@ -2,7 +2,7 @@
 title: "Basic Plots"
 author: "Jeff Goldsmith"
 date: 2023-09-14
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include = FALSE}
