@@ -70,3 +70,11 @@ ggplot(plot_df, aes(x = x, y = y)) + geom_point()
 ```
 
 This is a neat scatterplot!!!
+
+
+What if I try to add a histogram?
+
+```{r}
+ggplot(plot_df, aes(x = x)) + geom_histogram()
+```
+
