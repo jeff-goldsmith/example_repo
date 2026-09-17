@@ -1,7 +1,7 @@
 ---
-title: "Simple document"
+title: "A really not so simple document"
 author: "Jeff Goldsmith"
-date: 2026-09-15
+date: 2026-09-17
 output: html_document
 ---
 
