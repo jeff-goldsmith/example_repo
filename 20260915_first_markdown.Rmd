@@ -1,0 +1,72 @@
+---
+title: "Simple document"
+author: "Jeff Goldsmith"
+date: 2026-09-15
+output: html_document
+---
+
+I'm an R Markdown document! 
+
+```{r echo = TRUE, message = FALSE}
+library(tidyverse)
+```
+
+
+# Section 1
+
+Here's a **code chunk** that samples from 
+a _normal distribution_:
+
+```{r}
+samp = rnorm(100)
+length(samp)
+```
+
+# Section 2
+
+I can take the mean of the sample, too!
+The mean is `r mean(samp)`.
+
+# Section 3
+
+This is where I'm going to talk about code chunks.
+
+```{r eval = FALSE}
+mean(samp)
+sd(samp)
+```
+
+Let's also make a dataframe.
+
+```{r}
+example_df = 
+  tibble(
+    vec_numeric = 1:4,
+    vec_char = c("My", "name", "is", "jeff"),
+    vec_factor = factor(c("male", "male", "female", "female"))
+  )
+```
+
+I'll create a new dataframe.
+
+```{r}
+new_df = 
+  tibble(
+    x = rnorm(100),
+    y = 1 + 2 * x + rnorm(100)
+  )
+```
+
+Let's make a plot and see how cool that is!
+
+```{r}
+plot_df = 
+  tibble(
+    x = rnorm(1000, mean = 1, sd = .5),
+    y = 1 + 2 * x + rnorm(1000)
+  )
+
+ggplot(plot_df, aes(x = x, y = y)) + geom_point()
+```
+
+This is a neat scatterplot!!!
